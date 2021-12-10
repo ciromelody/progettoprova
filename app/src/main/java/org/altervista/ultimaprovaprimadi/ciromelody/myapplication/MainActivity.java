@@ -24,12 +24,14 @@ TextView textView;
         textView=new  TextView(this);
         textView.setText("Questa è la sola finestra che appare");
         setContentView(textView);
+
         aggiungiView();
+        textView.setText("La textView è stata ricostruita e più scrivo e più i bottoni sotto si allargano");
     }
 
     private void aggiungiView() {
         rlmain = new LinearLayout(this);
-        llp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT);
+        llp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         ll1 = new LinearLayout(this);
         ll1.setOrientation(LinearLayout.VERTICAL);
         textView = new TextView(this);
@@ -37,13 +39,13 @@ TextView textView;
         textView.setLayoutParams(lp);
         ll1.addView(textView);
         textView1 = new TextView(this);
-        // LinearLayout .LayoutParams lp1 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        LinearLayout .LayoutParams lp1 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         textView1.setLayoutParams(lp);
         ll1.addView(textView1);
 
 
         bn_creafile=new Button(this);
-        // LinearLayout .LayoutParams lp2 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+         LinearLayout .LayoutParams lp2 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         bn_creafile.setLayoutParams(lp);
         bn_creafile.setText("crea file");
         bn_creafile.setOnClickListener(new View.OnClickListener() {
